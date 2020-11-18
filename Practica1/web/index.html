@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Practica 1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Formulario de registro</h1>
+        <form method="post" action = "ServletRegistro" enctype = "multipart/form-data">
+            <label for ="nombre">Nombre: </label> <input type="text" name="nombre" id="nombre"/>
+            <br/>
+            <label for ="Apellido_Paterno">Apellido Paterno: </label> <input type="text" name="Apellido_Paterno" id="Apellido_Paterno"/>
+            <br/>
+            <label for ="Apellido_Materno">Apellido Materno: </label> <input type="text" name="Apellido_Materno" id="Apellido_Materno"/>
+            <br/>
+            <label for ="fecha">Fecha de Naciemiento: </label> <input type="date" name="fecha" id="fecha" max="2020-12-31"/>
+            <br/>
+            <label for ="sexo">Sexo: </label> <input type="radio" name="sexo" id="sexo" value="Hombre"/>Hombre    <input type="radio" name="sexo" id="sexo" value="Mujer"/>Mujer
+            <br/>
+            <label for="telefono">Telefono: </label> <input type="tel" id="telefono" name="telefono" placeholder="XX XXXXXXXX"/>
+            <br/>
+            <label for="web">Pagina Web personal: </label> <input type="url" id="web" name="web" placeholder="www.ejemplo.com"/>
+            <br/>
+            <label for="email">email de contacto: </label> <input type="email" id="email" name="email" placeholder="un@ejemplo.com"/>
+            <br/>
+            <label for="hora">Hora de entrada al trabajo: </label> <input type="time" id="hora" name="hora"/>
+            <br>
+            <p>Seleccione el lenguaje de programacion con mas experiencia:</p>
+            <input type="checkbox" id="tecnologia1" name="tecnologia1" value="c++"/> <label for="tecnologia1">C++</label>
+            <br>
+            <input type="checkbox" id="tecnologia2" name="tecnologia2" value="java"/> <label for="tecnologia2">Java</label>
+            <br>
+            <input type="checkbox" id="tecnologia3" name="tecnologia3" value="javascript"/> <label for="tecnologia3">JavaScript</label>
+            <br>
+            <label for="experiencia">Indique su nivel de maestria del lenguaje anteriormente seleccionado: </label> <input type="range" id="experiencia" name="experiencia" value="0"/>
+            <br>
+            <label for="file">Subida de Curriculum</label> <input type="file" name="file" id="file" accept=".pdf"/>
+            <br>
+            <label for="dir">Direccion Completa:</label> <textarea name="dir" id="dir" rows="10" cols="50"></textarea>
+            <br>
+            <label>Ciudad de residencia:</label>
+            <select name="ciudad" id="ciudad">
+                <option value="CDMX" selected>CDMX</option> 
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Monterrey">Monterrey</option>
+            </select>
+            <label for="frame">Marque todos los frameworks que maneja de la siguiente lista:</label>
+            <select multiple name="frame" id="frame">
+                <option value="React.js">React.js</option>
+                <option value="Vue.js">Vue.js</option>
+                <option value="JQuery">JQuery</option>
+                <option value="Boostrap">Boostrap</option>
+                <option value="Angular">Angular</option>
+            </select>
+            <br/>
+            <label for="id">id de acceso:</label> <input type="text" id="id" name="id"/>
+            <br/>
+            <label for="pas">password:</label> <input type="password" id="pas" name="pas">
+            <br/><br/>
+            <input type="submit" value="Submit"/>
+        </form>
+    </body>
+</html>
+
