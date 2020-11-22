@@ -12,6 +12,10 @@
         <servlet-name>crear2</servlet-name>
         <servlet-class>contenido.crear2</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>leer</servlet-name>
+        <servlet-class>contenido.leer</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>inicio</servlet-name>
         <url-pattern>/inicio</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>crear2</servlet-name>
         <url-pattern>/crear2</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>leer</servlet-name>
+        <url-pattern>/leer</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

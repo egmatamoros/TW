@@ -183,7 +183,7 @@ public class crear2 extends HttpServlet {
             Element tar4 = new Element("OPCION");
             tar4.setAttribute("IMAGEN",target4);
             tar4.setText(target4);
-            targets.addContent(target4);
+            targets.addContent(tar4);
             pregunta.addContent(targets);
             rootNode.addContent(pregunta);
             
