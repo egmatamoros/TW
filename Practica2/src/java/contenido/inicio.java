@@ -42,7 +42,7 @@ public class inicio extends HttpServlet {
             out.println("<center>");
             out.println("<h1>CREAR, ALTAS, BAJAS Y CAMBIOS</h1>");
             out.println("</center>");
-            out.println("<a href='./crear'>Crear nueva pregunta</a><br>");
+            out.println("<a href='./crear.html'>Crear nueva pregunta</a><br>");
             out.println("<table border=1 align='center'>");
             out.println("<tr>");
             out.println("<th WIDTH='20%'>Nombre de la pregunta</th> <th WIDTH='80%'>Acciones</th>");
