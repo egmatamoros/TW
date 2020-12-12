@@ -1,15 +1,47 @@
 #menu {
     padding: 0;
+    width: 100%; 
+    background-color:rgb(67, 103, 223);
+    height: 20px;
+}
+h1, #menu{
+    text-align: center;
 }
 
 li {
+    padding: 0px 100px 0px 100px;
     font-family: Arial;
     font-size: 11px;
-    float: left;
-    padding: 10px;
     background-color: blue;
     display: inline;
 }
-li a {
+li a{
     color: #fff;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-image: url('fondo.jpg');
+}
+
+.txtrojo {
+    color: red;
+}
+
+.textoAzul {
+    color: rgb(48, 25, 131);
+}
+.textoAzul#parrafo1 {
+    color: blue;
+}
+p{
+    font-size: small;
+    margin: 10px 20px 0px 20px ;
+}
+#contenidoPrincipal > p {
+    font-size: large;
 }
