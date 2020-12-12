@@ -1,13 +1,15 @@
+/*SELECTOR DE ID*/
 #menu {
     padding: 0;
     width: 100%; 
     background-color:rgb(67, 103, 223);
-    height: 20px;
+    height: 40px;
 }
+/*SELECTOR DE GRUPO*/
 h1, #menu{
     text-align: center;
 }
-
+/*SELECTOR DE ELEMENTO*/
 li {
     padding: 0px 100px 0px 100px;
     font-family: Arial;
@@ -15,33 +17,95 @@ li {
     background-color: blue;
     display: inline;
 }
+/*SELECTOR DECENDENTE*/
 li a{
-    color: #fff;
+    color: red;
+    font-size: 16pt;
 }
-
+/*SELECTOR UNIVERSAL*/
 *{
     padding: 0px;
     margin: 0px;
     font-family: 'Times New Roman', Times, serif;
 }
+/*SELECTOR DE  ELEMENTO*/
 body{
     background-image: url('fondo.jpg');
 }
-
+/*SELECTOR DE CLASE */
 .txtrojo {
     color: red;
 }
-
+/*SELECTOR DE CLASE */
 .textoAzul {
     color: rgb(48, 25, 131);
 }
+/*SELECTOR COMBINADO*/
 .textoAzul#parrafo1 {
     color: blue;
 }
+/*SELECTOR DE  ELEMENTO*/
 p{
     font-size: small;
     margin: 10px 20px 0px 20px ;
 }
+/*SELECTOR HIJO*/
 #contenidoPrincipal > p {
     font-size: large;
+}
+/*SELECTOR DE ID*/
+#imagenes {
+    text-align: center;
+}
+/*SELECTOR DE HERMANO*/
+img + p {
+     font-size: small;
+     color: rgb(102, 5, 54);
+     background-color: grey;
+     width: 30%;
+     margin-left: 35%;
+     margin-bottom: 50px;
+ }
+ /*SELECTOR DE PSEUDO CLASE A:HOVER*/
+ a:hover{
+    background-color:black;
+    color: white;
+}
+/*SELECTOR DE PSEUDO CLASE A:VISITED*/
+a:visited{
+    color: white;
+}
+/*SELECTOR DE ID*/
+#canales{
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+/*SELECTOR DE ATRIBUTO IGUALACIÓN EXACTA*/
+div[id="matefacil"]{
+    color: rgb(67,103,223);
+}
+/*SELECTOR DE ATRIBUTO IGUALACIÓN COMIENZA CON */
+div[id^= "julio"]{
+    color: orange;
+} 
+/*SELECTOR DE ATRIBUTO IGUALACIÓN  TERMINA CON*/
+div[id$="emic"]{
+    color: green;
+}
+/*SELECTOR DE ATRIBUTO IGUALACIÓN CONTIENE*/
+div[id*="lina"]{
+    color:indigo;
+}
+/*SELECTOR DE ATRIBUTO IGUALACIÓN MULTIPLE*/
+div[class="elfinal"][id*="Pagina"]{
+    font-size: 25px;
+    letter-spacing: 1.5vw;
+    text-align: center;
+    
+}
+/*SELECTOR DE CLASE*/
+.elfinal{
+    background-color: rgba(238, 36, 0, 0.336);
+    margin-bottom: 150px;
 }
