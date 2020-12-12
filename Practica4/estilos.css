@@ -1,1 +1,15 @@
-Estilos
+#menu {
+    padding: 0;
+}
+
+li {
+    font-family: Arial;
+    font-size: 11px;
+    float: left;
+    padding: 10px;
+    background-color: blue;
+    display: inline;
+}
+li a {
+    color: #fff;
+}
