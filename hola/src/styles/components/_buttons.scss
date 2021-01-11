@@ -1,0 +1,46 @@
+
+.btn{
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 7px 10px 7px 10px;
+  &:focus{
+    outline: none;
+  }
+
+}
+
+.btn-primary{
+  background-color: $primary;
+  border-radius: 5px;
+  &:disabled{
+    background-color: lighten($color: $primary, $amount: 15);
+  }
+  &:hover{
+    background-color: darken($color: $primary, $amount:15);
+  }
+}
+
+.btn-block{
+  width: 100%;
+}
+
+.btn-block1{
+  width: 8%;
+}
+
+.arrow-up {
+  width: 0;
+  height: 10px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid black;
+}
+
+.move-arrow-up1{
+  position: absolute;
+  left: 28%;
+  top: 45%;
+}
