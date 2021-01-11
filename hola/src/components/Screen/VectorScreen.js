@@ -6,6 +6,10 @@ export const VectorScreen = () => {
     const {state1,increment1,decrement1, reset1} = useCounter1();
     const {state3,increment3,decrement3, reset3} = useCounter3();
     const {state4,increment4,decrement4, reset4} = useCounter4();
+    function newSite() {
+        var web = './vectores.html?' + 'tipo=1&comXv1='+ this.state +'&comYv1=' + this.state1 + '&comXv2=' + this.state3 + '&comYv2=' + this.state4 + '&multia=1&multib=1';
+        document.getElementById('frame').src = web
+    } 
     return (
         <div className={'vector_main move-main'}>
             <div className={'main_box-container'}>
@@ -97,6 +101,9 @@ export const VectorScreen = () => {
                     </button>
                 </div>
 
+            </div>
+            <div className={'vector_box-container2'}>
+                <iframe  id="frame" src={'./vectores.html?' + 'tipo=1&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1' } title="vectores" width="810px" height="510px"></iframe>
             </div>
         </div>
     )
