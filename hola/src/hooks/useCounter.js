@@ -46,7 +46,7 @@ export const useCounter1 = (initState = 2) => {
     };
 }
 
-export const useCounter3 = (initState = 3) => {
+export const useCounter3 = (initState = 5) => {
     const [state3, setState3] = useState(initState);
 
     const increment3 = () => {
@@ -69,7 +69,7 @@ export const useCounter3 = (initState = 3) => {
     };
 }
 
-export const useCounter4 = (initState = 2) => {
+export const useCounter4 = (initState = 8) => {
     const [state4, setState4] = useState(initState);
 
     const increment4 = (factor = 1) => {

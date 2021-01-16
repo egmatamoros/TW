@@ -16,7 +16,7 @@ export const VectorScreen = () => {
             <div className={'main_box-container'}>
                 <div>
                     <button
-                        className={'btn btn-primary btn-block1 ml-1'}
+                        className={'btn btn-danger ml-1'}
                         onClick={
                             function () {
                                 setCount(1);
@@ -27,7 +27,7 @@ export const VectorScreen = () => {
                         a+b=c
                     </button>
                     <button
-                        className={'btn btn-primary btn-block1 ml-1'}
+                        className={'btn btn-danger ml-1'}
                         onClick={
                             function () {
                                 setCount(2);
@@ -38,7 +38,7 @@ export const VectorScreen = () => {
                         a-b=c
                     </button>
                     <button
-                        className={'btn btn-primary btn-block1 ml-1'}
+                        className={'btn btn-danger ml-1'}
                         onClick={ 
                             function () {
                                 setCount(3);
@@ -53,113 +53,104 @@ export const VectorScreen = () => {
             </div>
             <div className={'vector_box-container move_Vector'}>
                 Base Vectors
-                <div className={'mt-1'}>
-                    <button
-                        className={'arrow up move-arrow-up1'}
-                        onClick={
-                            function () {
-                                increment();
-                                newSite();
+                <div>
+                    ax=   ay=
+                    <div>
+                        <button
+                            className={'arrow up mr-1'}
+                            onClick={
+                                function () {
+                                    increment();
+                                    newSite();
+                                }
                             }
-                        }
-                    >
-
-                    </button>
-                    <button
-                        className={'arrow up move-arrow-up2'}
-                        onClick={
-                            function () {
-                                increment1();
-                                newSite();
+                        >
+                        </button>
+                        {state}
+                        <button
+                            className={'arrow down mr-1 ml-2'}
+                            onClick={
+                                function () {
+                                    decrement();
+                                    newSite();
+                                }
                             }
-                        }
-                    >
+                        >
+                        </button>
 
-                    </button>
-                </div>
-                <div className={'mr-2 mt-3'}>
-                    <div>ax={state}</div>
-                    <div>ay={state1}</div>
+                        <button
+                            className={'arrow up mr-1 ml-1'}
+                            onClick={
+                                function () {
+                                    increment1();
+                                    newSite();
+                                }
+                            }
+                        >
+                        </button>
+
+                        {state1}
+
+                        <button
+                            className={'arrow down mr-1 ml-2'}
+                            onClick={
+                                function () {
+                                    decrement1();
+                                    newSite();
+                                }
+                            }
+                        >
+                        </button>
+                    </div>
                 </div>
                 <div>
-                    <button
-                        className={'arrow down move-arrow-down1'}
-                        onClick={
-                            function () {
-                                decrement();
-                                newSite();
+                    bx=      by=
+                    <div>
+                        <button
+                            className={'arrow up arrow up mr-1'}
+                            onClick={
+                                function () {
+                                    increment3();
+                                    newSite();
+                                }
                             }
-                        }
-                    >
-
-                    </button>
-                    <button
-                        className={'arrow down move-arrow-down2'}
-                        onClick={
-                            function () {
-                                decrement1();
-                                newSite();
+                        >
+                        </button>
+                        {state3}
+                        <button
+                            className={'arrow down mr-1 ml-2'}
+                            onClick={
+                                function () {
+                                    decrement3();
+                                    newSite();
+                                }
                             }
-                        }
-                    >
+                        >
+                        </button>
 
-                    </button>
+                        <button
+                            className={'arrow up mr-1 ml-1'}
+                            onClick={
+                                function () {
+                                    increment4();
+                                    newSite();
+                                }
+                            }
+                        >
+                        </button>
+                        {state4}
+                        <button
+                            className={'arrow down mr-1 ml-2'}
+                            onClick={
+                                function () {
+                                    decrement4();
+                                    newSite();
+                                }
+                            }
+                        >
+                        </button>
+                    </div>
                 </div>
-                <div className={'mt-1'}>
-                    <button
-                        className={'arrow up move-arrow-up3'}
-                        onClick={
-                            function () {
-                                increment3();
-                                newSite();
-                            }
-                        }
-                    >
-
-                    </button>
-                    <button
-                        className={'arrow up move-arrow-up4'}
-                        onClick={
-                            function () {
-                                increment4();
-                                newSite();
-                            }
-                        }
-                    >
-
-                    </button>
-                </div>
-                <div className={'mt-2'}>
-                    <div className={'mt-2'}>bx={state3}</div>
-
-                    <div className={'mt-2'}>by={state4}</div>
-                </div>
-
-                <div>
-                    <button
-                        className={'arrow down move-arrow-down3'}
-                        onClick={
-                            function () {
-                                decrement3();
-                                newSite();
-                            }
-                        }
-                    >
-
-                    </button>
-                    <button
-                        className={'arrow down move-arrow-down4'}
-                        onClick={
-                            function () {
-                                decrement4();
-                                newSite();
-                            }
-                        }
-                    >
-
-                    </button>
-                </div>
-
             </div>
             <div className={'vector_box-container2'}>
                 <iframe  id="frame" src={'./vectores.html?' + 'tipo=' + count + '&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1' } title="vectores" width="810px" height="510px"></iframe>

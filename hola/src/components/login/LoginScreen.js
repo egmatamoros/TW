@@ -38,7 +38,7 @@ export const LoginScreen = ({history}) =>{
                         autoComplete={'off'}
                     />
                     <button
-                        className={'btn btn-primary btn-block'}
+                        className={'btn1 btn-primary btn-block'}
                         onClick={handleLogin}
                     >
                         login
