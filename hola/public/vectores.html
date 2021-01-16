@@ -10,7 +10,7 @@
     <div id="box"  class="jxgbox" style="width:800px; height:500px;float: left;"></div>
 
 <script type="text/javascript">
-    var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-5, 25, 45, -5], axis:true});
+    var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-5, 25, 45, -5], axis:true, showCopyright: false});
     // Funcion de suma de vectores
     
     function getQueryVariable(variable) {
@@ -35,6 +35,8 @@
         sumaV(x1 * multia, y1 * multia, x2 * multib, y2 * multib);    
     }else if (tipo == '2'){
         restaV(x1 * multia, y1 * multia, x2 * multib, y2 * multib);    
+    }else if (tipo == '3'){
+        tres(x1 * multia, y1 * multia, x2 * multib, y2 * multib);
     } 
     //restaV(0*5, 5*5, 5*5, 5*5);
     function sumaV(comXv1, comYv1, comXv2, comYv2) {
@@ -121,6 +123,51 @@
             strokeWidth: 5,
             highlightStrokeWidth: 5,
             lastArrow: {type: 1, size: 5, highlightSize: 6},
+            touchLastPoint: false
+        });
+        var ta = board.create('text',[-3, -3,"A"], {fontSize: 20, anchor: v1});
+        var tb = board.create('text',[-3, -3,"B"], {fontSize: 20,anchor: v2});
+        var tb = board.create('text',[-3, -3,"C"], {fontSize: 20,anchor: v3});
+    }
+    function tres(comXv1, comYv1, comXv2, comYv2) {
+        // limpiar tablero
+        // for (el in this.board.objects) {
+        //          if (this.board.objects.hasOwnProperty(el)) {
+        //              this.board.objects[el].remove();
+        //          }
+        //      }
+        var xv1 = 3; //variable de origen de V1 en X
+        var yv1 = 5; //variable de origen de V1 en Y
+        var v1x = this.board.create('point', [xv1 + comXv1, 0], {size:1, opacity: 1, name: ''});
+        var v1y = this.board.create('point', [0, yv1 + comYv1], {size:1, opacity: 1, name: ''});
+        this.v1 = this.board.create('segment', [[xv1,yv1],[v1x.X(),v1y.Y()]], {
+            strokeColor:'cyan',
+            strokeWidth:5,
+            highlightStrokeWidth: 5,
+            lastArrow: {type: 1, size: 5, highlightSize: 6},
+            touchLastPoint: false
+        });
+        var xv2 = 14; //variable de origen de V2 en X
+        var yv2 = 5; //variable de origen de V2 en Y
+        var v2x = this.board.create('point', [xv2 + comXv2, 0], {size:1, opacity: 1, name: '', Color:'#0000FF'});
+        var v2y = this.board.create('point', [0, yv2 + comYv2], {size:1, opacity: 1, name: '', Color:'#0000FF'});
+        var v2 = this.board.create('segment', [[xv2,yv2],[v2x.X(),v2y.Y()]], {
+            strokeColor: 'cyan',
+            strokeWidth: 5,
+            highlightStrokeWidth: 5,
+            lastArrow: {type: 1, size: 5, highlightSize: 6},
+            touchLastPoint: false
+        });
+
+        var xv3 = 24; //variable de origen de V3 en X
+        var yv3 = 5; //variable de origen de V3 en Y
+        var v3x = this.board.create('point', [xv3 + v1x.X() - xv1  + v2x.X() - xv2, 0], {size:1, opacity: 1, name: '', Color:'#00FF00'});
+        var v3y = this.board.create('point', [0, yv3 + v1y.Y() - yv1 + v2y.Y() - yv2], {size:1, opacity: 1, name: '', Color:'#00FF00'});
+        var v3 = this.board.create('segment', [[xv3,yv3],[v3x.X(),v3y.Y()]], {
+            strokeColor: '#000000',
+            strokeWidth: 5,
+            highlightStrokeWidth: 5,
+            firstArrow: {type: 1, size: 5, highlightSize: 6},
             touchLastPoint: false
         });
         var ta = board.create('text',[-3, -3,"A"], {fontSize: 20, anchor: v1});

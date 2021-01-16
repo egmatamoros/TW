@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react';
 import{useCounter,useCounter1,useCounter3,useCounter4} from "../../hooks/useCounter";
 
 export const VectorScreen = () => {
@@ -6,8 +6,9 @@ export const VectorScreen = () => {
     const {state1,increment1,decrement1, reset1} = useCounter1();
     const {state3,increment3,decrement3, reset3} = useCounter3();
     const {state4,increment4,decrement4, reset4} = useCounter4();
-    function newSite() {
-        var web = './vectores.html?' + 'tipo=1&comXv1='+ this.state +'&comYv1=' + this.state1 + '&comXv2=' + this.state3 + '&comYv2=' + this.state4 + '&multia=1&multib=1';
+    const [count, setCount] = useState(1);
+    function newSite(tipo) {
+        var web = './vectores.html?' + 'tipo=' + count + '&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1';
         document.getElementById('frame').src = web
     } 
     return (
@@ -16,16 +17,34 @@ export const VectorScreen = () => {
                 <div>
                     <button
                         className={'btn btn-primary btn-block1 ml-1'}
+                        onClick={
+                            function () {
+                                setCount(1);
+                                newSite();
+                            }
+                        }
                     >
                         a+b=c
                     </button>
                     <button
                         className={'btn btn-primary btn-block1 ml-1'}
+                        onClick={
+                            function () {
+                                setCount(2);
+                                newSite();
+                            }
+                        }
                     >
                         a-b=c
                     </button>
                     <button
                         className={'btn btn-primary btn-block1 ml-1'}
+                        onClick={ 
+                            function () {
+                                setCount(3);
+                                newSite();
+                            }
+                        }
                     >
                         a+b+c=0
                     </button>
@@ -37,13 +56,23 @@ export const VectorScreen = () => {
                 <div className={'mt-1'}>
                     <button
                         className={'arrow up move-arrow-up1'}
-                        onClick={()=>increment()}
+                        onClick={
+                            function () {
+                                increment();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
                     <button
                         className={'arrow up move-arrow-up2'}
-                        onClick={()=>increment1()}
+                        onClick={
+                            function () {
+                                increment1();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
@@ -55,13 +84,23 @@ export const VectorScreen = () => {
                 <div>
                     <button
                         className={'arrow down move-arrow-down1'}
-                        onClick={() =>decrement()}
+                        onClick={
+                            function () {
+                                decrement();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
                     <button
                         className={'arrow down move-arrow-down2'}
-                        onClick={() =>decrement1()}
+                        onClick={
+                            function () {
+                                decrement1();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
@@ -69,13 +108,23 @@ export const VectorScreen = () => {
                 <div className={'mt-1'}>
                     <button
                         className={'arrow up move-arrow-up3'}
-                        onClick={()=>increment3()}
+                        onClick={
+                            function () {
+                                increment3();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
                     <button
                         className={'arrow up move-arrow-up4'}
-                        onClick={()=>increment4()}
+                        onClick={
+                            function () {
+                                increment4();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
@@ -89,13 +138,23 @@ export const VectorScreen = () => {
                 <div>
                     <button
                         className={'arrow down move-arrow-down3'}
-                        onClick={() =>decrement3()}
+                        onClick={
+                            function () {
+                                decrement3();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
                     <button
                         className={'arrow down move-arrow-down4'}
-                        onClick={() =>decrement4()}
+                        onClick={
+                            function () {
+                                decrement4();
+                                newSite();
+                            }
+                        }
                     >
 
                     </button>
@@ -103,7 +162,7 @@ export const VectorScreen = () => {
 
             </div>
             <div className={'vector_box-container2'}>
-                <iframe  id="frame" src={'./vectores.html?' + 'tipo=1&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1' } title="vectores" width="810px" height="510px"></iframe>
+                <iframe  id="frame" src={'./vectores.html?' + 'tipo=' + count + '&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1' } title="vectores" width="810px" height="510px"></iframe>
             </div>
         </div>
     )
