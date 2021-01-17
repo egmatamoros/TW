@@ -9,13 +9,18 @@ export const LoginScreen = ({history}) =>{
 
     const handleLogin = () =>{
         //history.push('/')
-        dispatch({
-            type: types.login,
-            payload: {
-                name: 'Fernando'
-            }
-        })
-        history.replace('/')
+        try {
+            dispatch({
+                type: types.login,
+                payload: {
+                    name: 'Fernando'
+                }
+            })
+            history.replace('/')
+        }catch (e) {
+            throw e
+        }
+
     }
 
     return(

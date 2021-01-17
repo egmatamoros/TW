@@ -14,7 +14,7 @@ export const principal = () => {
                         uno no puede acceder a algunas rutas sin estar logueado dando una seguridad extra al proyecto.
                     </p>
                     <img
-                        src="../images/logo.png"
+                        src="./resources/logo_si_fondo.svg"
                         width={250}
                         height={200}
                         alt="Logo del proyecto"
