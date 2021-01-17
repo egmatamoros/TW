@@ -13,7 +13,7 @@ export const LoginScreen = ({history}) =>{
             dispatch({
                 type: types.login,
                 payload: {
-                    name: 'Fernando'
+                    name: 'admin'
                 }
             })
             history.replace('/')
@@ -31,8 +31,8 @@ export const LoginScreen = ({history}) =>{
                     <input
                         className={'auth_input'}
                         type="text"
-                        placeholder={'Email'}
-                        name={'email'}
+                        placeholder={'User'}
+                        name={'User'}
                         autoComplete={'off'}
                     />
                     <input
