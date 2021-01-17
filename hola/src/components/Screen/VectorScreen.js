@@ -1,11 +1,14 @@
 import React, {useState} from 'react';
-import{useCounter,useCounter1,useCounter3,useCounter4} from "../../hooks/useCounter";
+import{useCounter,useCounter1,useCounter3,useCounter4,useCounter5,useCounter6} from "../../hooks/useCounter";
 
 export const VectorScreen = (props) => {
     const {state,increment,decrement, reset} = useCounter();
     const {state1,increment1,decrement1, reset1} = useCounter1();
     const {state3,increment3,decrement3, reset3} = useCounter3();
     const {state4,increment4,decrement4, reset4} = useCounter4();
+    const {state5,increment5,decrement5, reset5} = useCounter5();
+    const {state6,increment6,decrement6, reset6} = useCounter6();
+
     const [count, setCount] = useState(1);
     const estado = props.match.params.estado;
     function obtenerVariables(variable) {
@@ -69,6 +72,63 @@ export const VectorScreen = (props) => {
                     >
                         a+b+c=0
                     </button>
+
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+
+
+                    <button
+                        className={'arrow up mr-1 ml-1'}
+                        style={{ backgroundColor: "#2e8ece"}}
+                        onClick={
+                            function () {
+                                increment5();
+                                newSite();
+                            }
+                        }
+                    >
+                    </button>
+                    {state5}
+                    <button
+                        className={'arrow down mr-1 ml-1'}
+                        style={{ backgroundColor: "#2e8ece"}}
+                        onClick={
+                            function () {
+                                decrement5();
+                                newSite();
+                            }
+                        }
+                    >
+                    </button>
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;
+
+                    <button
+                        className={'arrow up mr-1 ml-1'}
+                        style={{ backgroundColor: "#2e8ece"}}
+                        onClick={
+                            function () {
+                                increment6();
+                                newSite();
+                            }
+                        }
+                    >
+                    </button>
+                    {state6}
+                    <button
+                        className={'arrow down mr-1 ml-1'}
+                        style={{ backgroundColor: "#2e8ece"}}
+                        onClick={
+                            function () {
+                                decrement6();
+                                newSite();
+                            }
+                        }
+                    >
+                    </button>
+
                 </div>
 
             </div>
