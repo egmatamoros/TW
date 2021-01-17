@@ -53,9 +53,9 @@ export const VectorScreen = () => {
             </div>
             <div className={'vector_box-container move_Vector'}>
                 Base Vectors
-                <div>
-                    ax=   ay=
-                    <div>
+                <div className={'mt-2'}>
+                    &nbsp;ax= &nbsp;&nbsp;&nbsp; ay=
+                    <div className={'mt-1'}>
                         <button
                             className={'arrow up mr-1'}
                             onClick={
@@ -103,9 +103,9 @@ export const VectorScreen = () => {
                         </button>
                     </div>
                 </div>
-                <div>
-                    bx=      by=
-                    <div>
+                <div className={'mt-2'}>
+                    &nbsp; bx= &nbsp;&nbsp;&nbsp; by=
+                    <div className={'mt-1'}>
                         <button
                             className={'arrow up arrow up mr-1'}
                             onClick={
