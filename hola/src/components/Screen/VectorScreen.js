@@ -239,6 +239,13 @@ export const VectorScreen = (props) => {
                         >
                         </button>
                     </div>
+                    <div className={'mt-2'}>
+                        <button
+                            className={'btn btn-danger ml-1'}
+                        >
+                            Guardar
+                        </button>
+                    </div>
                 </div>
             </div>
             <div className={'vector_box-container2'}>
