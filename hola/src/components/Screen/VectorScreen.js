@@ -1,20 +1,41 @@
 import React, {useState} from 'react';
 import{useCounter,useCounter1,useCounter3,useCounter4} from "../../hooks/useCounter";
 
-export const VectorScreen = () => {
+export const VectorScreen = (props) => {
     const {state,increment,decrement, reset} = useCounter();
     const {state1,increment1,decrement1, reset1} = useCounter1();
     const {state3,increment3,decrement3, reset3} = useCounter3();
     const {state4,increment4,decrement4, reset4} = useCounter4();
     const [count, setCount] = useState(1);
+    const estado = props.match.params.estado;
+    function obtenerVariables(variable) {
+        var query = estado;
+        var vars = query.split("&");
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return false;
+    }
+    let nuevo = obtenerVariables('nuevo');
+    let hola = 'no es nuevo';
+    let exito= 'NO ES EXITOSO';
+    if (nuevo == '1') {
+        hola = 'Es nuevo!!!';
+        exito = obtenerVariables('exito');
+    }
     function newSite(tipo) {
-        var web = './vectores.html?' + 'tipo=' + count + '&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1';
+        var web = '../vectores.html?' + 'tipo=' + count + '&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1';
         document.getElementById('frame').src = web
     } 
     return (
         <div className={'vector_main move-main'}>
             <div className={'main_box-container'}>
                 <div>
+
+                    Estado: {hola} y {exito}
                     <button
                         className={'btn btn-danger ml-1'}
                         onClick={
@@ -58,6 +79,7 @@ export const VectorScreen = () => {
                     <div className={'mt-1'}>
                         <button
                             className={'arrow up mr-1'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     increment();
@@ -69,6 +91,7 @@ export const VectorScreen = () => {
                         {state}
                         <button
                             className={'arrow down mr-1 ml-2'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     decrement();
@@ -80,6 +103,7 @@ export const VectorScreen = () => {
 
                         <button
                             className={'arrow up mr-1 ml-1'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     increment1();
@@ -93,6 +117,7 @@ export const VectorScreen = () => {
 
                         <button
                             className={'arrow down mr-1 ml-2'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     decrement1();
@@ -108,6 +133,7 @@ export const VectorScreen = () => {
                     <div className={'mt-1'}>
                         <button
                             className={'arrow up arrow up mr-1'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     increment3();
@@ -119,6 +145,7 @@ export const VectorScreen = () => {
                         {state3}
                         <button
                             className={'arrow down mr-1 ml-2'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     decrement3();
@@ -130,6 +157,7 @@ export const VectorScreen = () => {
 
                         <button
                             className={'arrow up mr-1 ml-1'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     increment4();
@@ -141,6 +169,7 @@ export const VectorScreen = () => {
                         {state4}
                         <button
                             className={'arrow down mr-1 ml-2'}
+                            style={{ backgroundColor: "#2e8ece"}}
                             onClick={
                                 function () {
                                     decrement4();
@@ -153,7 +182,7 @@ export const VectorScreen = () => {
                 </div>
             </div>
             <div className={'vector_box-container2'}>
-                <iframe  id="frame" src={'./vectores.html?' + 'tipo=' + count + '&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1' } title="vectores" width="810px" height="510px"></iframe>
+                <iframe  id="frame" src={'../vectores.html?' + 'tipo=' + count + '&comXv1='+ state +'&comYv1=' + state1 + '&comXv2=' + state3 + '&comYv2=' + state4 + '&multia=1&multib=1' } title="vectores" width="810px" height="510px"></iframe>
             </div>
         </div>
     )

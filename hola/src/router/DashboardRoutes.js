@@ -15,7 +15,7 @@ export const DashboardRoutes = () =>{
                 <Switch>
                     <Route exact path={'/inicio'} component={principal}/>
                     <Route exact path={'/proyects'} component={TableScreen}/>
-                    <Route exact path={'/new'} component={VectorScreen}/>
+                    <Route exact path={'/new/:estado'} component={VectorScreen}/>
 
                     <Redirect to={'/inicio'}/>
                 </Switch>
