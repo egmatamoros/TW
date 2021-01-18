@@ -12,7 +12,7 @@ export const Proyecto = () =>{
     const [user, dispatch] = useReducer(authReducer, {}, init);
 
     useEffect(() => {
-        sessionStorage.setItem('user',JSON.stringify(user));
+        localStorage.setItem('user',JSON.stringify(user));
     }, [user]);
 
 
