@@ -1,0 +1,20 @@
+<RAIZ>
+    <USER USU="admin" pass="1234">
+        <SIMU v1x="5" v1y="3" v2x="7" v2y="3" tipo="1" multiA="1" multiB="1">Simulacion 1</SIMU>
+        <SIMU v1x="5" v1y="3" v2x="7" v2y="3" tipo="1" multiA="1" multiB="1">Simulacion 2</SIMU>
+        <SIMU v1x="5" v1y="3" v2x="7" v2y="3" tipo="1" multiA="1" multiB="1">Simulacion 3</SIMU>
+        <SIMU v1x="5" v1y="3" v2x="7" v2y="3" tipo="1" multiA="1" multiB="1">Simulacion 4</SIMU>
+        <SIMU v1x="5" v1y="3" v2x="7" v2y="3" tipo="1" multiA="1" multiB="1">Simulacion 5</SIMU>
+        <FONDOS NOMBRE="w1.png">
+            <F NOMBRE="w1.png"></F>
+            <F NOMBRE="capital1.jpg"></F>
+            <F NOMBRE="capital2.jpg"></F>
+            <F NOMBRE="capital3.jpg"></F>
+            <F NOMBRE="capital4.jpg"></F>
+            <F NOMBRE="s1.svg"></F>
+            <F NOMBRE="s2.svg"></F>
+            <F NOMBRE="s3.svg"></F>
+            <F NOMBRE="s4.svg"></F>
+        </FONDOS>
+    </USER>
+</RAIZ>

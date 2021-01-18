@@ -2,12 +2,12 @@ import React, {useState} from 'react';
 import{useCounter,useCounter1,useCounter3,useCounter4,useCounter5,useCounter6} from "../../hooks/useCounter";
 
 export const VectorScreen = (props) => {
-    const {state,increment,decrement, reset} = useCounter();
-    const {state1,increment1,decrement1, reset1} = useCounter1();
-    const {state3,increment3,decrement3, reset3} = useCounter3();
-    const {state4,increment4,decrement4, reset4} = useCounter4();
-    const {state5,increment5,decrement5, reset5} = useCounter5();
-    const {state6,increment6,decrement6, reset6} = useCounter6();
+    const {state,increment,decrement} = useCounter();
+    const {state1,increment1,decrement1} = useCounter1();
+    const {state3,increment3,decrement3} = useCounter3();
+    const {state4,increment4,decrement4} = useCounter4();
+    const {state5,increment5,decrement5} = useCounter5();
+    const {state6,increment6,decrement6} = useCounter6();
 
     const [count, setCount] = useState(1);
     const estado = props.match.params.estado;
