@@ -3,26 +3,15 @@ import {AuthContext} from "../../auth/AuthContext";
 import {types} from "../../types/types";
 import axios from "axios";
 import XMLData from '../../xml/base.xml'
-import {useForm,useForm1} from "../../hooks/useForm";
+import {useForm} from "../../hooks/useForm";
 
 export const LoginScreen = ({history}) =>{
 
     const [formValues, handleInputChange]= useForm({
-        User: ''
-    });
-    const [formValues1, handleInputChange1]= useForm1({
+        User: '',
         password: ''
     });
-    const {User} = formValues
-    const {password} =formValues1
-
-    /*const imprimir= (e) =>{
-        e.preventDefault()
-        console.log(User)
-        console.log(password)
-    }*/
-
-
+    const {User, password} = formValues
     let datos = null
     let conjunto = null
 
@@ -36,15 +25,15 @@ export const LoginScreen = ({history}) =>{
             });
         const ps = require('xml2js').parseString
         ps(datos, function (err, result) {
-            conjunto = result.RAIZ.USER[0].$.USU +  result.RAIZ.USER[0].$.pass
+            conjunto = result.RAIZ.USER[0].$.USU + result.RAIZ.USER[0].$.pass
         })
     }
-
+    leerxml()
     const handleLogin = (e) =>{
         e.preventDefault();
         //history.push('/')
         try {
-            leerxml()
+
             if(User + password === conjunto)
             {
                 dispatch({
@@ -54,7 +43,12 @@ export const LoginScreen = ({history}) =>{
                     }
                 })
                 history.replace('/')
+
             }
+            else{
+                alert('Usuario no registrado')
+            }
+
 
         }catch (a) {
             throw a
@@ -83,10 +77,10 @@ export const LoginScreen = ({history}) =>{
                         name={'password'}
                         autoComplete={'off'}
                         value={password}
-                        onChange={handleInputChange1}
+                        onChange={handleInputChange}
                     />
                     <button
-                        className={'btn1 btn-primary btn-block'}
+                        className={'btn1 btn-prima btn-block'}
                         onClick={handleLogin}
                     >
                         login

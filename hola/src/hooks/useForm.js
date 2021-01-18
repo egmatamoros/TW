@@ -18,22 +18,3 @@ export const useForm = (initState = {})=> {
     return [values, handleInputChange,reset]
 
 }
-
-export const useForm1 = (initState = {})=> {
-    const [values1, setValues1] = useState(initState);
-
-    const reset1 = () =>{
-        setValues1(initState)
-    }
-
-    const handleInputChange1 = ({target}) => {
-        setValues1({
-            ...values1,
-            [target.name]: target.value
-        })
-    }
-
-    return [values1, handleInputChange1,reset1]
-
-}
-
