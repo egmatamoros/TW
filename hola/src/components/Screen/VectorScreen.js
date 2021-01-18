@@ -16,7 +16,7 @@ export const VectorScreen = (props) => {
         var vars = query.split("&");
         for (var i = 0; i < vars.length; i++) {
             var pair = vars[i].split("=");
-            if (pair[0] == variable) {
+            if (pair[0] === variable) {
                 return pair[1];
             }
         }
@@ -25,7 +25,7 @@ export const VectorScreen = (props) => {
     let nuevo = obtenerVariables('nuevo');
     let hola = 'no es nuevo';
     let exito= 'NO ES EXITOSO';
-    if (nuevo == '1') {
+    if (nuevo === '1') {
         hola = 'Es nuevo!!!';
         exito = obtenerVariables('exito');
     }
