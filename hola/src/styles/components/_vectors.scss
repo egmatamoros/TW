@@ -1,4 +1,6 @@
 .main_box-container{
+  color: white;
+  font-weight: bold;
   background-color: lighten($color: $bars, $amount: 5);
   box-shadow: 0px 3px $dark-grey;
   border-radius: 2px;
