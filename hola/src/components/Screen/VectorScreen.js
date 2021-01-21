@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import{useCounter,useCounter1,useCounter3,useCounter4,useCounter5,useCounter6} from "../../hooks/useCounter";
+import {useForm} from "../../hooks/useForm";
 
 export const VectorScreen = (props) => {
     const [Gv1x, setGv1x] = useState(3); //variable v1x 
@@ -10,6 +11,12 @@ export const VectorScreen = (props) => {
     const [GB, setGB] = useState(1); //variable B
     const [Tipo, setTipo] = useState(1); //variable tipo ecuacion
     let texto1, texto2;
+
+    const [formValues, handleInputChange]= useForm({
+        Nombre: ''
+    });
+    const {Nombre} = formValues
+
     if(Tipo == '2'){
         texto1 = "a  - ";
     } else {
@@ -139,6 +146,17 @@ export const VectorScreen = (props) => {
                     >
                     </button>
                     {texto2}
+
+                    &nbsp;&nbsp;&nbsp;
+                    Nombre:
+                    <input
+                        type="text"
+                        placeholder={'Nombre'}
+                        name={'Nombre'}
+                        autoComplete={'off'}
+                        value={Nombre}
+                        onChange={handleInputChange}
+                    />
 
                 </div>
 
