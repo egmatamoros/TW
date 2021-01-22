@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {useForm} from "../../hooks/useForm";
 
-export const ver = (props) => {
+export const Ver = (props) => {
     const [Gv1x, setGv1x] = useState(3); //variable v1x
     const [Gv1y, setGv1y] = useState(2); //variable v1y
     const [Gv2x, setGv2x] = useState(5); //variable v2x

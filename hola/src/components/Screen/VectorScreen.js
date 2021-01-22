@@ -68,7 +68,6 @@ export const VectorScreen = (props) => {
         <div className={'vector_main move-main'}>
             <div className={'main_box-container'}>
                 <div>
-                    {Nombre}
                     <button
                         className={'btn btn-danger ml-1'}
                         onClick={
