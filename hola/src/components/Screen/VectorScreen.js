@@ -11,7 +11,7 @@ export const VectorScreen = (props) => {
     const [GB, setGB] = useState(1); //variable B
     const [Tipo, setTipo] = useState(1); //variable tipo ecuacion
     let texto1, texto2;
-    var id = 0;
+    const [id, setID] = useState(0);
     const [formValues, handleInputChange]= useForm({
         Nombre: ''
     });
@@ -50,7 +50,7 @@ export const VectorScreen = (props) => {
         setGA(parseInt(obtenerVariables('multiA'),10));
         setGB(parseInt(obtenerVariables('multiB'),10));
         setTipo(parseInt(obtenerVariables('tipo'),10));
-        id = parseInt(obtenerVariables('id'),10);
+        setID(parseInt(obtenerVariables('id'),10));
         props.match.params.estado = '1';
     }
     function newSite(tipo) {
@@ -60,8 +60,8 @@ export const VectorScreen = (props) => {
     async function guardar() {
         var peticion =  "/ServletGuardar?nombre="+ Nombre +"&comXv1="+ Gv1x +"&comYv1="+ Gv1y +"&comXv2="+ Gv2x +"&comYv2="+ Gv2y +"&tipo="+ Tipo +"&multiA="+ GA +"&multiB="+ GB +"&id=" + id;
         await fetch(peticion)
-        .then(response => response.json())
-        .then(data => console.log(data));
+        .then(response => response.text())
+        .then(data => document.location.href="/proyects");
     }
 
     return (
