@@ -13,12 +13,18 @@ export const principal = () => {
                         ocupa react-router-dom, se implementó un conjunto de rutas públicas y privadas de tal forma que
                         uno no puede acceder a algunas rutas sin estar logueado dando una seguridad extra al proyecto.
                     </p>
+                    <center>
                     <img
                         src="./resources/logo_sin_fondo.svg"
                         width={250}
                         height={200}
                         alt="Logo del proyecto"
                     />
+                    <br/>
+                    <audio src="../mfondo.mp3" controls autoplay loop>
+                        <p>Tu navegador no implementa el elemento audio</p>
+                    </audio>
+                    </center>
                 </div>
             </div>
         </div>
